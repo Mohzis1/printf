@@ -1,5 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
+
+#include <stdlib.h>
 #include <stdarg.h>
 #include <stdio.h>
 #include <unistd.h>
@@ -19,7 +21,7 @@
 #define S_SHORT 1
 
 /**
- * struct fmt - Struct op
+ * * struct fmt - Struct op
  *
  * @fmt: The format.
  * @fn: The function associated.
@@ -76,7 +78,6 @@ int print_non_printable(va_list types, char buffer[],
 /* Funcion to print memory address */
 int print_pointer(va_list types, char buffer[],
 		int flags, int width, int precision, int size);
-
 /* Funciotns to handle other specifiers */
 int get_flags(const char *format, int *i);
 int get_width(const char *format, int *i, va_list list);
@@ -86,11 +87,9 @@ int get_size(const char *format, int *i);
 /*Function to print string in reverse*/
 int print_reverse(va_list types, char buffer[],
 		int flags, int width, int precision, int size);
-
 /*Function to print a string in rot 13*/
 int print_rot13string(va_list types, char buffer[],
 		int flags, int width, int precision, int size);
-
 /* width handler */
 int handle_write_char(char c, char buffer[],
 		int flags, int width, int precision, int size);
@@ -100,11 +99,9 @@ int write_num(int ind, char bff[], int flags, int width, int precision,
 		int length, char padd, char extra_c);
 int write_pointer(char buffer[], int ind, int length,
 		int width, int flags, char padd, char extra_c, int padd_start);
-
 int write_unsgnd(int is_negative, int ind,
 char buffer[],
 		int flags, int width, int precision, int size);
-
 /****************** UTILS ******************/
 int is_printable(char);
 int append_hexa_code(char, char[], int);
