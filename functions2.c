@@ -166,7 +166,7 @@ int print_rot13string(va_list types, char buffer[],
 		str = "(AHYY)";
 	for (i = 0; str[i]; i++)
 	{
-		for (j = 0; in[j]; j++)	
+		for (j = 0; in[j]; j++)
 		{
 			if (in[j] == str[i])
 			{
